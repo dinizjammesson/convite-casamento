@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite de Casamento - Flávia & Jammesson</title>
+    <title>Convite de Casamento Interativo</title>
     <style>
         body {
             font-family: 'Cormorant Garamond', serif;
@@ -18,7 +18,7 @@
 
         .container {
             background-color: #fff;
-            width: 375px; 
+            width: 375px; /* Largura padrão de celular */
             max-width: 90%;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -27,6 +27,7 @@
             position: relative;
         }
 
+        /* Moldura Botânica */
         .container::before, .container::after {
             content: '';
             position: absolute;
@@ -40,7 +41,7 @@
         .container::before {
             top: 10px;
             left: 10px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,40 Q30,10 60,30 T90,60" stroke="%233e4a36" fill="none" stroke-width="2"/></svg>');
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,40 Q30,10 60,30 T90,60" stroke="%233e4a36" fill="none" stroke-width="2"/></svg>'); /* Exemplo simples de ramo */
         }
         .container::after {
             bottom: 10px;
@@ -81,6 +82,7 @@
             z-index: 1;
         }
 
+        /* Foto Principal */
         .main-photo-container {
             width: 180px;
             height: 180px;
@@ -97,6 +99,7 @@
             object-fit: cover;
         }
 
+        /* Galeria de Fotos */
         .photo-gallery {
             display: flex;
             justify-content: center;
@@ -112,6 +115,10 @@
             overflow: hidden;
             border: 2px solid #cad2c5;
             transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.1);
         }
 
         .gallery-item img {
@@ -170,6 +177,8 @@
         .btn:hover {
             background-color: #a3b18a;
             color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         }
 
         .btn-rsvp {
@@ -178,9 +187,18 @@
             border: none;
         }
 
+        .btn-rsvp:hover {
+            background-color: #3e4a36;
+        }
+
         .btn-gift {
             background-color: #cad2c5;
             border-color: #cad2c5;
+        }
+
+        .btn-gift:hover {
+            background-color: #a3b18a;
+            border-color: #a3b18a;
         }
 
         .icon {
@@ -196,6 +214,7 @@
             color: #888;
         }
 
+        /* Fontes do Google */
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Great+Vibes&display=swap');
     </style>
 </head>
@@ -229,19 +248,19 @@
     </div>
 
     <div class="buttons-section">
-        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Manoel+Ribeiro+da+Silva,04,Rio+Doce,Olinda" target="_blank" class="btn">
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+Manoel+Ribeiro+da+Silva,04,+Rio+Doce+-+Olinda" target="_blank" class="btn">
             <span class="icon">📍</span> Ver Endereço da Igreja
         </a>
 
-        <a href="https://www.google.com/maps/search/?api=1&query=Degust+Recepções+Av+Carlos+de+Lima+Cavalcante+4639" target="_blank" class="btn">
+        <a href="https://www.google.com/maps/search/?api=1&query=Degust+Recepções+-+Av.+Carlos+de+Lima+Cavalcante,4639+-+Casa+Caiada,+Olinda+-+PE" target="_blank" class="btn">
             <span class="icon">🥂</span> Ver Local da Recepção
         </a>
 
-        <a href="https://api.whatsapp.com/send?phone=5581987485920&text=Olá! Confirmo minha presença no casamento de Flávia e Jammesson." target="_blank" class="btn btn-rsvp">
+        <a href="https://api.whatsapp.com/send?phone=5581987485920&text=Olá! Gostaria de confirmar minha presença no casamento." target="_blank" class="btn btn-rsvp">
             <span class="icon">✅</span> Confirmar Presença (RSVP)
         </a>
 
-        <a href="#" target="_blank" class="btn btn-gift">
+        <a href="https://www.suamensagemaqui.com/lista-de-casamento-editavel" target="_blank" class="btn btn-gift">
             <span class="icon">🎁</span> Nossa Lista de Presentes
         </a>
     </div>

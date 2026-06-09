@@ -283,7 +283,12 @@
             <i class="fa-solid fa-calendar-check icon"></i> Confirmar Presença (RSVP)
         </a>
 
-       <div class="gift-card">
+       <button type="button" class="btn btn-gift" onclick="mostrarLista()">
+    <i class="fa-solid fa-gift icon"></i>
+    Nossa Lista de Presentes
+</button>
+
+<div id="listaPresentes" class="gift-card" style="display:none;">
 
     <img src="cvc-pateo.png" alt="Lista de Presentes CVC">
 
@@ -304,12 +309,14 @@
         CÓDIGO: 1037869
     </div>
 
-</div>
+    <br><br>
 
-<a href="https://www.cvc.com.br/" target="_blank" class="btn btn-gift">
-    <i class="fa-solid fa-gift icon"></i> Acessar Site da CVC
-</a>
-    </div>
+    <a href="https://www.cvc.com.br/" target="_blank" class="btn btn-gift">
+        <i class="fa-solid fa-arrow-up-right-from-square icon"></i>
+        Acessar Site da CVC
+    </a>
+
+</div>
 
     <div class="footer">
         Com carinho, os noivos.

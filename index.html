@@ -132,8 +132,8 @@
         .main-photo-container img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            object-position: #fff;
+            object-fit: cover;
+            object-position: center 5%;
         }
 
         .photo-gallery {
@@ -239,6 +239,9 @@
     margin-top: 10px;
     background: transparent;
 }
+        .miniatura-agua {
+    object-position: center top;
+}
 
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Great+Vibes&display=swap');
     </style>
@@ -262,7 +265,8 @@
     <div class="photo-gallery">
 
         <div class="gallery-item">
-            <img src="foto 01.jpeg"
+            <img class="miniatura-agua"
+                 src="foto 01.jpeg"
                  alt="Foto 1"
                  onclick="trocarFoto('foto 01.jpeg')">
         </div>

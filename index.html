@@ -133,7 +133,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 5%;
+            
         }
 
         .photo-gallery {
@@ -367,7 +367,23 @@ const fotos = [
 let indice = 0;
 
 function trocarFoto(foto) {
-    document.getElementById("fotoPrincipal").src = foto;
+
+    const img = document.getElementById("fotoPrincipal");
+
+    img.src = foto;
+
+    if (foto === "foto 01.jpeg") {
+        img.style.objectPosition = "center 5%";
+    }
+
+    if (foto === "foto 02.jpeg") {
+        img.style.objectPosition = "center top";
+    }
+
+    if (foto === "foto 03.jpeg") {
+        img.style.objectPosition = "center center";
+    }
+
     indice = fotos.indexOf(foto);
 }
 
@@ -379,7 +395,7 @@ setInterval(function () {
         indice = 0;
     }
 
-    document.getElementById("fotoPrincipal").src = fotos[indice];
+    trocarFoto(fotos[indice]);
 
 }, 3000);
 
